@@ -6,6 +6,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{amsthm}
+
+\newtheorem{solution}{Solution}[chapter]
 
 \title{{\huge \textbf{Solutions Manual}}\\Introduction to Algorithms -- A Creative
 Approach}
@@ -14,8 +17,8 @@ Approach}
 \setcounter{tocdepth}{1}
 
 \begin{document}
-    \frontmatter 
-   
+    \frontmatter
+
     \maketitle
     \chapter{Preface}
     % Include preface text here %
@@ -25,67 +28,68 @@ Approach}
     All the solutions were written by students, we can't guarantee that 100\% of
     the solutions are correct, but you are more than welcome to contribute.
 
-    \newpage 
+    \newpage
     \tableofcontents
 
     \mainmatter
     % Chapter 1
     \chapter{Introduction}
-    \section{Exercises}
+    \section*{Exercises}
 
     % Chapter 2
     \chapter{Mathematical Induction}
-    \section{Drill exercises}
-    \section{Creative exercises}
+    \section*{Drill exercises}
+    \section*{Creative exercises}
 
     % Chapter 3
     \chapter{Analysis of Algorithms}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \input{ch03/1}
+    \section*{Creative exercises}
+
     % Chapter 4
     \chapter{Data Structures}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 5
     \chapter{Design of Algorithms by Induction}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 6
     \chapter{Algorithms Involving Sequences and Sets}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 7
     \chapter{Graph Algorithms}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 8
     \chapter{Geometric Algorithms}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 9
     \chapter{Algebraic and Numeric Algorithms}
-    \section{Drill exercises}
-    \section{Creative exercises}
+    \section*{Drill exercises}
+    \section*{Creative exercises}
 
     % Chapter 10
     \chapter{Reductions}
-    \section{Drill exercises}
-    \section{Creative exercises}
+    \section*{Drill exercises}
+    \section*{Creative exercises}
 
     % Chapter 11
     \chapter{NP-Completeness}
-    \section{Drill exercises}
-    \section{Creative exercises}
-    
+    \section*{Drill exercises}
+    \section*{Creative exercises}
+
     % Chapter 12
     \chapter{Parallel Algorithms}
-    \section{Drill exercises}
-    \section{Creative exercises}
+    \section*{Drill exercises}
+    \section*{Creative exercises}
 
 \end{document}
