@@ -1,0 +1,86 @@
+%%% File: 3.5.tex
+%%% Author: Alexandre Medeiros <alexandre.medeiros@students.ic.unicamp.br>
+
+\paragraph{3.5}
+
+\subparagraph{a.}
+
+We have that $f(n) = 100n + \log n$ and $g(n) = n + (\log n)^2$.
+Then let
+\[
+  \lim_{n \to \infty} \frac{f(n)}{g(n)} =
+  \lim_{n \to \infty} \frac{100n + \log n}{n + (\log n)^2}
+\]
+By L'Hôpital's rule
+\[
+  \lim_{n \to \infty} \frac{100n + \log n}{n + (\log n)^2} =
+  \lim_{n \to \infty} \frac{100 + \frac{1}{n}}{1 + 2\frac{\log n}{n}} = 100
+\]
+\begin{equation}\label{eq:ch03:5:a:O}
+  \therefore f(n) = O(g(n))
+\end{equation}
+Now, let
+\[
+  \lim_{n \to \infty} \frac{g(n)}{f(n)} =
+  \lim_{n \to \infty} \frac{n + (\log n)^2}{100n + \log n}
+\]
+By L'Hôpital's rule
+\[
+  \lim_{n \to \infty} \frac{n + (\log n)^2}{100n + \log n} =
+  \lim_{n \to \infty} \frac{1 + 2\frac{\log n}{n}}{100 + \frac{1}{n}} =
+  \frac{1}{100}
+\]
+\begin{equation}\label{eq:ch03:5:a:Om}
+  \therefore g(n) = O(f(n)) \Leftrightarrow f(n) = \Omega(g(n))
+\end{equation}
+From \eqref{eq:ch03:5:a:O} and \eqref{eq:ch03:5:a:Om} we have that
+\[
+  f(n) = \Theta(g(n))
+\]
+
+\subparagraph{b.}
+
+We have that $f(n) = \log n$ and $g(n) = \log n^2$.
+Note that
+\[
+  g(n) = \log n^2 = 2\log n = 2 f(n)
+\]
+\[
+  \therefore f(n) = \Theta(g(n))
+\]
+
+\subparagraph{c.}
+
+We have that $f(n) = \frac{n^2}{\log n}$ and $g(n) = n(\log n)^2$.
+Then let
+\[
+  \lim_{n \to \infty} \frac{f(n)}{g(n)} =
+  \lim_{n \to \infty} \frac{\frac{n^2}{\log n}}{n(\log n)^2} =
+  \lim_{n \to \infty} \frac{n}{(\log n)^3}
+\]
+By L'Hôpital's rule
+\[
+  \lim_{n \to \infty} \frac{n}{(\log n)^3} =
+  \lim_{n \to \infty} \frac{n}{3(\log n)^2} =
+  \lim_{n \to \infty} \frac{n}{6\log n} =
+  \lim_{n \to \infty} \frac{n}{6} = \infty
+\]
+\[
+  \therefore f(n) \neq O(g(n))
+\]
+Now, let
+\[
+  \lim_{n \to \infty} \frac{g(n)}{f(n)} =
+  \lim_{n \to \infty} \frac{n(\log n)^2}{\frac{n^2}{\log n}} =
+  \lim_{n \to \infty} \frac{(\log n)^3}{n}
+\]
+By L'Hôpital's rule
+\[
+  \lim_{n \to \infty} \frac{(\log n)^3}{n} =
+  \lim_{n \to \infty} \frac{3(\log n)^2}{n} =
+  \lim_{n \to \infty} \frac{6\log n}{n} =
+  \lim_{n \to \infty} \frac{6}{n} = 0
+\]
+\[
+  \therefore g(n) = O(f(n)) \Leftrightarrow f(n) = \Omega(g(n))
+\]
